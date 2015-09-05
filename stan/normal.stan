@@ -9,7 +9,7 @@ parameters {//推定したいモデルパラメターを定義
   real<lower=0> sigma;
 }
 model {//モデルの定義
-  mu ~ uniform(150, 190);     //muの事前分布
+  mu ~    normal(0, 1000);     //muの事前分布
   sigma ~ normal(0, 1000);  //sigmaの事前分布
   y ~ normal(mu, sigma);    //データ y は正規分布から生成されていると想定
 }
