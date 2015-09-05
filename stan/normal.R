@@ -5,7 +5,7 @@ y <- rnorm(N, mean = 172, sd = 5.5)
 normal_data <- list(N = N, y = y)
 
 #データのヒストグラム
-hist(y, breaks =seq(150,190,by=2.5), col="skyblue")
+hist(y, breaks =seq(50,300,by=2.5), col="skyblue", xlim = c(150,190))
 rug(y)
 
 #モデルのあてはめ
